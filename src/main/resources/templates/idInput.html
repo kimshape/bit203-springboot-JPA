@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<form action="/member2/test1">
+    id:<input type="text" name="memberId"><br>
+    <input type="submit">
+</form>
+<pre>
+
+
+
+    </pre>
+<form action="/member2/test2" id="myForm" >
+    id:<input type="text"   name="memberId"><br>
+    <input  type="submit">
+</form>
+
+<a href="/member2/test2/1234" >link</a>
+
+
+<form action="/member2/test2" id="test2">
+    id:<input type="text" id="memberId" name="memberId"><br>
+    <input type="button" onclick="btn_click();" value="제출">
+</form>
+
+
+<script>
+
+    /* document.getElementById("myForm").addEventListener("submit",idInput);
+    function idInput(){
+        this.action='/member2/test2/'+ this.memberId.value;
+        //alert(this.memberId.value);
+    } */
+
+    document.getElementById("myForm").addEventListener("submit", function (){
+        this.action='/member2/test2/'+ this.memberId.value;
+        //alert(this.memberId.value);
+    } );
+
+
+
+
+
+    function btn_click() {
+        //alert(document.getElementById("memberId").value);
+        document.getElementById("test2").action='/member2/test2/'+document.getElementById("memberId").value;
+    }
+
+</script>
+
+
+
+
+</body>
+</html>

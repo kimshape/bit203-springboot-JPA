@@ -1,0 +1,21 @@
+server:
+  address: localhost
+  port: 9089
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 1234
+    url: jdbc:mysql://localhost:3306/testJPA?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+  jpa:
+    open-in-view: true
+    hibernate:
+       naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+logging:
+  level:
+    '[org.hibernate.type.descriptor.sql]': trace
